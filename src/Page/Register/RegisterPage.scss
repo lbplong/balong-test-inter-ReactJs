@@ -1,0 +1,60 @@
+@import "~bootstrap/scss/bootstrap";
+.register-wrapper {
+  width: 425px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    .header-form {
+      height: 80%;
+      background-color: #2196f3;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      padding: 0 40px;
+    }
+    .footer-form {
+      height: 20%;
+      background-color: #90caf9;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: space-between;
+      padding: 40px;
+      .btn-submit-register {
+        background-color: #f76f00;
+        color: #fff;
+      }
+      .btn-redirect-login {
+        text-decoration: underline;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .loading-page {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background-color: #0000005d;
+    right: 0;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

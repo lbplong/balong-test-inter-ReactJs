@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/bootstrap";
+.home-wrapper {
+  width: 425px;
+  margin: auto;
+  height: 100vh;
+  .nav-color-bg {
+    background-color: #2196f3;
+    .container {
+      .btn-menu-top {
+        border: 0px;
+        color: #fff;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      .dropdown {
+        #dropdown-account {
+          color: #fff;
+          &:focus {
+            box-shadow: none;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .dropdown-menu.show {
+          right: 0;
+        }
+      }
+    }
+  }
+}
