@@ -108,11 +108,16 @@ const RegisterPage = (props) => {
     }, 1000);
     try {
       const response = await AccountAPI.register(params);
-      localStorage.token = response.token;
-      props.setAccountFromToken(response.token);
-      navigate(location.state?.from?.pathname || "/", {
-        replace: true,
-      });
+      if (response.token == null) {
+        const message = response.message;
+        window.alert(message);
+      } else {
+        localStorage.token = response.token;
+        props.setAccountFromToken(response.token);
+        navigate(location.state?.from?.pathname || "/", {
+          replace: true,
+        });
+      }
     } catch (error) {
       window.alert("Register fail");
     }
